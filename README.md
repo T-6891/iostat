@@ -61,7 +61,15 @@ vim /etc/crontab
 # Zabbix monitoring iostat
 59 23 * * *      root    /opt/.master/zabbix/iostat/scripts/iostat-collect.sh
 ```
-
+Добавить параметры сбора статистики в конфигурационный файл Zabbix агента
+```
+vim /etc/zabbix/zabbix_agentd.conf
+```
+```
+# Disk statistics via iostat (sysstat)
+UserParameter=iostat.discovery, iostat -d | awk 'BEGIN {check=0;count=1;array[0]="total";} {if(check==1 && $1 != ""){array[count]=$1;count=count+1;}if($1=="Device:"){check=1;}} END {printf("{\n\t\"data\":[\n");for(i=0;i<count;++i){printf("\t\t{\n\t\t\t\"{#HARDDISK}\":\"%s\"}", array[i]); if(i+1<count){printf(",\n");}} printf("]}\n");}'
+UserParameter=iostat.metric[*],/opt/.master/zabbix/iostat/scripts/iostat-parse.sh /tmp/iostat-collect.tmp $1 $2
+```
 
 **Проверка**
 -----
