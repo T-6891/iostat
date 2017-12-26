@@ -59,7 +59,7 @@ vim /etc/crontab
 ```
 ```
 # Zabbix monitoring iostat
-59 23 * * *      root    /opt/.master/zabbix/iostat-collect.sh
+59 23 * * *      root    /opt/.master/zabbix/iostat/scripts/iostat-collect.sh
 ```
 
 
