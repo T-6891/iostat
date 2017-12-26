@@ -8,6 +8,7 @@
 
 * тест
 
+```
  ./iostat/
   ├── README.md
   ├── scripts
@@ -17,7 +18,7 @@
       └── Template_OS_Linux_IOSTAT.xml
 
 2 directories, 4 files
-
+```
 
 
 **Установка**
