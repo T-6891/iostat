@@ -33,13 +33,17 @@
 **Установка**
 -----
 
-**Внимание!** - Перед установкой необходимо наличие в систему установленного пакета zabbix-agent
+**Внимание!** - Перед установкой необходимо наличие в системе установленных компонентов 
+ * zabbix-agent
+ * sysstat
 
 Загрузить репозиторий
+
 ```
 cd /tmp/
 git clone https://github.com/T-6891/iostat.git
-cd iostat/
+mkdir /opt/.master/zabbix/
+cp -R /tmp/iostat/ /opt/.master/zabbix/
 
 ```
 
