@@ -42,9 +42,12 @@
 ```
 cd /tmp/
 git clone https://github.com/T-6891/iostat.git
+```
+Создать рабочий каталог, скопировать в него скрипты.
+```
 mkdir /opt/.master/zabbix/
 cp -R /tmp/iostat/ /opt/.master/zabbix/
-
+chmod +x /opt/.master/zabbix/iostat/scripts/*
 ```
 
 **Настройка**
