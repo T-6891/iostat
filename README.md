@@ -30,6 +30,10 @@
 
 
 **Установка**
+Загрузить репозиторий
+cd /tmp/
+git clone https://github.com/T-6891/iostat.git
+cd 
 
 
 **Настройка**
