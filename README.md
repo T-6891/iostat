@@ -48,6 +48,7 @@ git clone https://github.com/T-6891/iostat.git
 mkdir /opt/.master/zabbix/
 cp -R /tmp/iostat/ /opt/.master/zabbix/
 chmod +x /opt/.master/zabbix/iostat/scripts/*
+rm -rf /tmp/iostat/
 ```
 
 **Настройка**
