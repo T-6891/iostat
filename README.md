@@ -111,3 +111,21 @@ systemctl restart zabbix-agent.service
 
 **Проверка**
 -----
+Проверка автоопределения дисков
+```
+zabbix_agentd --test iostat.discovery
+```
+Пример вывода
+```
+iostat.discovery                              [t|{
+	"data":[
+		{
+			"{#HARDDISK}":"total"},
+		{
+			"{#HARDDISK}":"sda"},
+		{
+			"{#HARDDISK}":"dm-0"},
+		{
+			"{#HARDDISK}":"dm-1"}]}]
+
+```
