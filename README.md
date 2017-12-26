@@ -49,6 +49,10 @@ mkdir /opt/.master/zabbix/
 cp -R /tmp/iostat/ /opt/.master/zabbix/
 chmod +x /opt/.master/zabbix/iostat/scripts/*
 ```
+
+**Настройка**
+-----
+
 Добавить задание в планировщик
 ```
 vim /etc/crontab
@@ -57,11 +61,6 @@ vim /etc/crontab
 # Zabbix monitoring iostat
 59 23 * * *      root    /opt/.master/zabbix/iostat-collect.sh
 ```
-
-
-
-**Настройка**
------
 
 
 **Проверка**
