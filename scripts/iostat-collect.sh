@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 killall iostat
 rm -rf /tmp/iostat-collect.tmp
